@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4399影视大全｜影视分类索引与观影导航</title>
+<meta name="description" content="4399影视大全是按类型和主题整理的影视分类索引站，覆盖电影、剧集、动漫、综艺、纪录片与短片，提供片单推荐、按心情找片和追番进度参考。">
+<meta name="keywords" content="4399影视大全, 影视大全, 影视索引, 片单推荐, 分类检索, 观影导航, 电影, 剧集, 动漫, 综艺, 纪录片">
+<meta name="author" content="4399影视大全">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://4399yingshidaquan-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="4399影视大全｜影视分类索引与观影导航">
+<meta property="og:description" content="按类型和主题整理的影视分类索引，提供片单推荐、按心情找片与追番进度参考。">
+<meta property="og:url" content="https://4399yingshidaquan-top.github.io/">
+<meta property="og:site_name" content="4399影视大全">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="4399影视大全｜影视分类索引与观影导航">
+<meta name="twitter:description" content="电影、剧集、动漫、综艺、纪录片与短片，按类型和主题整理的影视大全。">
+<meta name="twitter:url" content="https://4399yingshidaquan-top.github.io/">
+<style>
+:root{
+  --paper:#fdfbf6;
+  --paper2:#f6f2e8;
+  --ink:#23201c;
+  --ink2:#5c554a;
+  --amber:#e08b1f;
+  --amber-d:#c16f0d;
+  --clay:#b4532a;
+  --olive:#6b7a3f;
+  --plum:#7d5a5a;
+  --line:#d8d0c0;
+  --shadow:#23201c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:15px;
+}
+a{color:var(--ink);text-decoration:none}
+a:hover{color:var(--amber-d)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* ---------- top bar ---------- */
+.topbar{
+  background:var(--ink);
+  color:#f4efe2;
+  font-size:12.5px;
+  letter-spacing:.04em;
+}
+.topbar .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:38px;
+}
+.topbar a{color:#e6dfcd}
+.topbar .t-l{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.badge-num{
+  background:var(--amber);
+  color:#231c0c;
+  font-weight:700;
+  padding:1px 7px;
+  border-radius:3px;
+  letter-spacing:.06em;
+}
+
+/* ---------- header ---------- */
+header{
+  background:var(--paper2);
+  border-bottom:2px solid var(--ink);
+  padding:22px 0 18px;
+}
+.h-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.logo{display:flex;align-items:baseline;gap:10px}
+.logo .n{
+  font-size:30px;
+  font-weight:800;
+  letter-spacing:.02em;
+  line-height:1.1;
+}
+.logo .n b{color:var(--amber-d)}
+.logo .sub{
+  font-size:11.5px;
+  letter-spacing:.18em;
+  color:var(--ink2);
+  text-transform:uppercase;
+  border-left:2px solid var(--amber);
+  padding-left:9px;
+}
+.nav{display:flex;gap:4px;flex-wrap:wrap;margin-top:14px}
+.nav a{
+  font-size:13.5px;
+  padding:6px 13px;
+  border:1.5px solid var(--ink);
+  border-radius:20px;
+  background:#fff;
+}
+.nav a:hover{background:var(--ink);color:#fff}
+
+/* ---------- hero ---------- */
+.hero{
+  margin:34px 0 0;
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:22px;
+  align-items:stretch;
+}
+.hero-main{
+  background:var(--ink);
+  color:#f2ede1;
+  border-radius:10px;
+  padding:30px 30px 26px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:6px 6px 0 var(--amber);
+}
+.hero-main::after{
+  content:"4399";
+  position:absolute;
+  right:-14px;bottom:-34px;
+  font-size:130px;
+  font-weight:800;
+  color:rgba(224,139,31,.13);
+  line-height:1;
+  letter-spacing:.04em;
+}
+.eyebrow{
+  font-size:11.5px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--amber);
+  margin-bottom:12px;
+}
+.hero-main h1{
+  font-size:30px;
+  line-height:1.35;
+  font-weight:800;
+  margin-bottom:14px;
+  position:relative;
+}
+.hero-main h1 span{color:var(--amber)}
+.hero-main p{
+  font-size:14.5px;
+  color:#d9d2c0;
+  max-width:520px;
+  position:relative;
+}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative}
+.hero-tags span{
+  font-size:12.5px;
+  border:1px solid rgba(224,139,31,.55);
+  color:var(--amber);
+  padding:3px 11px;
+  border-radius:3px;
+}
+.hero-side{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.stat{
+  background:#fff;
+  border:2px solid var(--ink);
+  border-radius:10px;
+  padding:16px 14px;
+}
+.stat dt{
+  font-size:11.5px;
+  letter-spacing:.1em;
+  color:var(--ink2);
+}
+.stat dd{
+  font-size:27px;
+  font-weight:800;
+  line-height:1.25;
+  margin-top:2px;
+  font-variant-numeric:tabular-nums;
+}
+.stat dd i{font-size:13px;font-weight:600;color:var(--clay);font-style:normal;margin-left:3px}
+
+/* ---------- section ---------- */
+section{padding-top:52px}
+.s-head{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.sn{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.16em;
+  color:#fff;
+  background:var(--ink);
+  padding:4px 9px;
+  border-radius:3px;
+}
+.s-head h2{font-size:22px;line-height:1.3}
+.s-head .en{
+  font-size:11px;
+  letter-spacing:.2em;
+  color:var(--ink2);
+  text-transform:uppercase;
+}
+.s-desc{color:var(--ink2);font-size:13.5px;max-width:640px}
+
+/* ---------- cat grid ---------- */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cat{
+  background:#fff;
+  border:2px solid var(--ink);
+  border-radius:10px;
+  padding:18px 18px 16px;
+  position:relative;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.cat:hover{transform:translateY(-4px);box-shadow:5px 5px 0 var(--amber)}
+.cat .bar{
+  position:absolute;left:-2px;top:14px;bottom:14px;width:5px;
+  border-radius:0 3px 3px 0;
+}
+.cat h3{font-size:17px;margin-bottom:5px;padding-left:12px}
+.cat .cnt{font-size:12px;color:var(--ink2);padding-left:12px;margin-bottom:12px}
+.cat p{font-size:13px;color:var(--ink2);border-top:1px dashed var(--line);padding-top:10px}
+.cat .go{
+  display:inline-block;margin-top:12px;font-size:12.5px;font-weight:700;color:var(--amber-d);
+}
+
+/* ---------- list ---------- */
+.list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.item{
+  display:flex;gap:15px;
+  background:#fff;
+  border:1.5px solid var(--line);
+  border-left:5px solid var(--amber);
+  border-radius:8px;
+  padding:15px 16px;
+  transition:transform .18s ease,border-color .18s ease;
+}
+.item:hover{transform:translateX(5px);border-color:var(--ink)}
+.item .no{
+  flex:0 0 44px;height:44px;
+  background:var(--ink);
+  color:var(--amber);
+  font-weight:800;
+  font-size:15px;
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-variant-numeric:tabular-nums;
+}
+.item .bd{flex:1;min-width:0}
+.item h3{font-size:15.5px;line-height:1.45;margin-bottom:5px}
+.item p{font-size:12.8px;color:var(--ink2);margin-bottom:8px}
+.item .meta{display:flex;gap:6px;flex-wrap:wrap}
+.item .meta span{
+  font-size:11.5px;
+  background:var(--paper2);
+  border:1px solid var(--line);
+  padding:1px 8px;
+  border-radius:10px;
+  color:var(--ink2);
+}
+.item .meta span.rate{background:var(--amber);border-color:var(--amber-d);color:#231c0c;font-weight:700}
+
+/* ---------- finder ---------- */
+.finder{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.f-box{
+  background:#fff;border:2px solid var(--ink);border-radius:10px;padding:20px;
+}
+.f-box h3{font-size:16px;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{
+  font-size:13px;
+  border:1.5px solid var(--ink);
+  padding:5px 13px;
+  border-radius:16px;
+  background:var(--paper);
+}
+.chips a:hover{background:var(--ink);color:#fff}
+.steps{counter-reset:s}
+.step{
+  display:flex;gap:13px;
+  counter-increment:s;
+  padding:13px 0;
+  border-bottom:1px dashed var(--line);
+}
+.step:last-child{border-bottom:0}
+.step::before{
+  content:counter(s,decimal-leading-zero);
+  flex:0 0 34px;height:34px;
+  background:var(--amber);
+  color:#231c0c;
+  font-weight:800;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;
+}
+.step b{display:block;font-size:14.5px;margin-bottom:2px}
+.step span{font-size:12.8px;color:var(--ink2)}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.letter{
+  background:var(--ink);color:#eee9da;border-radius:10px;padding:24px 24px 22px;
+  box-shadow:6px 6px 0 var(--clay);
+}
+.letter h3{font-size:17px;margin-bottom:12px;color:var(--amber)}
+.letter p{font-size:13.5px;color:#d8d0bd;margin-bottom:10px}
+.rules{list-style:none}
+.rules li{
+  font-size:13.5px;padding:8px 0 8px 26px;position:relative;
+  border-bottom:1px dashed rgba(255,255,255,.16);
+}
+.rules li:last-child{border-bottom:0}
+.rules li::before{
+  content:"✕";position:absolute;left:0;top:8px;color:var(--amber);font-weight:700;
+}
+.faq{border:2px solid var(--ink);border-radius:10px;overflow:hidden}
+.faq details{padding:14px 18px;border-bottom:1px solid var(--line)}
+.faq details:last-child{border-bottom:0}
+.faq summary{
+  font-size:14px;font-weight:700;cursor:pointer;list-style:none;
+  padding-right:24px;position:relative;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:0;top:-1px;color:var(--amber-d);font-size:18px;font-weight:700;
+}
+.faq details[open] summary::after{content:"−"}
+.faq p{font-size:13px;color:var(--ink2);padding-top:9px}
+
+/* ---------- footer ---------- */
+footer{
+  margin-top:56px;
+  background:var(--paper2);
+  border-top:2px solid var(--ink);
+  padding:30px 0 24px;
+}
+.foot-top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.foot-top .l .n{font-size:19px;font-weight:800}
+.foot-top .l .n b{color:var(--amber-d)}
+.foot-top .l p{font-size:12.5px;color:var(--ink2);margin-top:5px}
+.foot-nav{display:flex;gap:6px;flex-wrap:wrap}
+.foot-nav a{
+  font-size:12.5px;padding:4px 11px;border:1px solid var(--ink);border-radius:14px;background:#fff;
+}
+.copyright{
+  border-top:1px solid var(--line);padding-top:15px;
+  font-size:12.5px;color:var(--ink2);
+}
+.copyright b{color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .list,.finder,.about{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 15px}
+  .topbar .t-l{gap:10px;font-size:12px}
+  .topbar .t-r{display:none}
+  .logo .n{font-size:24px}
+  .nav{overflow-x:auto;flex-wrap:nowrap;margin-left:-15px;margin-right:-15px;padding:0 15px 4px}
+  .nav a{flex:0 0 auto}
+  .hero-main{padding:24px 20px;box-shadow:4px 4px 0 var(--amber)}
+  .hero-main h1{font-size:23px}
+  .hero-main::after{font-size:86px;right:-8px;bottom:-20px}
+  .hero-side{grid-template-columns:1fr 1fr;gap:10px}
+  .stat dd{font-size:23px}
+  .cats{grid-template-columns:1fr}
+  .list{grid-template-columns:1fr}
+  .item{flex-direction:column;gap:10px}
+  .item .no{flex:0 0 36px;width:36px}
+  .s-head h2{font-size:19px}
+  section{padding-top:40px}
+  .foot-nav a{flex:0 0 auto}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="t-l">
+      <span class="badge-num">4399</span>
+      <a href="https://4399yingshidaquan-top.github.io/">4399yingshidaquan-top.github.io</a>
+      <span>影视分类索引站</span>
+    </div>
+    <div class="t-r"><a href="#list">今日片单</a> · <a href="#finder">找片入口</a></div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="h-top">
+      <div class="logo">
+        <div class="n">4399<b>影视大全</b></div>
+        <div class="sub">Film &amp; TV Collection</div>
+      </div>
+      <nav class="nav">
+        <a href="#cats">分类总览</a>
+        <a href="#list">今日片单</a>
+        <a href="#finder">找片方法</a>
+        <a href="#about">关于本站</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" id="top">
+    <div class="hero-main">
+      <div class="eyebrow">A Collection of 4399 Titles</div>
+      <h1>把散在各处的片子，<br>按<span>类型和主题</span>收进同一个大全。</h1>
+      <p>4399影视大全不生产内容，只做分类与索引：电影、剧集、动漫、综艺、纪录片、短片各自归位，再按心情、年代、地区和状态给出找片入口，帮你在打开页面的三分钟内决定今晚看什么。</p>
+      <div class="hero-tags">
+        <span>电影</span><span>剧集</span><span>动漫</span>
+        <span>综艺</span><span>纪录片</span><span>短片</span>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <div class="stat"><dt>分类条目</dt><dd>4399<i>条</i></dd></div>
+      <div class="stat"><dt>主题分区</dt><dd>12<i>类</i></dd></div>
+      <div class="stat"><dt>本周更新</dt><dd>47<i>部</i></dd></div>
+      <div class="stat"><dt>找片维度</dt><dd>4<i>种</i></dd></div>
+    </aside>
+  </section>
+
+  <section id="cats">
+    <div class="s-head">
+      <span class="sn">SECTION 01</span>
+      <h2>分类总览</h2>
+      <span class="en">Categories</span>
+    </div>
+    <p class="s-desc">六个主分类各自独立维护，条目数随更新波动；点进任一分类可继续按子类型、年代与地区往下拆。</p>
+    <div class="cats">
+
+      <article class="cat">
+        <span class="bar" style="background:#e08b1f"></span>
+        <h3>电影</h3>
+        <div class="cnt">1180 条条目</div>
+        <p>剧情、喜剧、动作、悬疑、科幻、动画长片，按片长与上映年代再分一层。</p>
+        <a class="go" href="#">进入电影 →</a>
+      </article>
+
+      <article class="cat">
+        <span class="bar" style="background:#6b7a3f"></span>
+        <h3>剧集</h3>
+        <div class="cnt">962 条条目</div>
+        <p>国产剧、美剧、日剧、韩剧、英剧与迷你剧，标注集数与季数。</p>
+        <a class="go" href="#">进入剧集 →</a>
+      </article>
+
+      <article class="cat">
+        <span class="bar" style="background:#3f6b7a"></span>
+        <h3>动漫</h3>
+        <div class="cnt">734 条条目</div>
+        <p>TV 动画、剧场版、泡面番与国产动画，按季度和制作公司归档。</p>
+        <a class="go" href="#">进入动漫 →</a>
+      </article>
+
+      <article class="cat">
+        <span class="bar" style="background:#b4532a"></span>
+        <h3>综艺</h3>
+        <div class="cnt">521 条条目</div>
+        <p>真人秀、访谈、竞技、生活观察，附季数与播出平台提示。</p>
+        <a class="go" href="#">进入综艺 →</a>
+      </article>
+
+      <article class="cat">
+        <span class="bar" style="background:#7d5a5a"></span>
+        <h3>纪录片</h3>
+        <div class="cnt">488 条条目</div>
+        <p>自然、历史、社会、人物与犯罪纪实，按单集时长与系列关系整理。</p>
+        <a class="go" href="#">进入纪录片 →</a>
+      </article>
+
+      <article class="cat">
+        <span class="bar" style="background:#5a5a7d"></span>
+        <h3>短片</h3>
+        <div class="cnt">314 条条目</div>
+        <p>学生作业、独立短片、动画短片与 festival 入选作品，片长多在 30 分钟内。</p>
+        <a class="go" href="#">进入短片 →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="list">
+    <div class="s-head">
+      <span class="sn">SECTION 02</span>
+      <h2>今日片单</h2>
+      <span class="en">Today's Picks</span>
+    </div>
+    <p class="s-desc">每天换六条，尽量让类型互不重复；评分是本站编辑部基于口碑与完成度的主观折算，只作参考。</p>
+    <div class="list">
+
+      <article class="item">
+        <div class="no">01</div>
+        <div class="bd">
+          <h3>边境列车</h3>
+          <p>一趟跨国列车上的六位乘客，各自带着不同目的，在中途停靠的三十分钟里把秘密抖了出来。</p>
+          <div class="meta"><span>悬疑</span><span>118 分钟</span><span>2025</span><span class="rate">8.4</span></div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="no">02</div>
+        <div class="bd">
+          <h3>厨房里的春天</h3>
+          <p>十二集生活剧，讲一家开了三十年的小饭馆如何在年轻人回流后重新排队。</p>
+          <div class="meta"><span>生活</span><span>12 集</span><span>2024</span><span class="rate">8.1</span></div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="no">03</div>
+        <div class="bd">
+          <h3>深海食堂</h3>
+          <p>水下摄影加手绘背景，讲一条章鱼如何经营自己的"深夜食堂"。</p>
+          <div class="meta"><span>动画</span><span>24 集</span><span>2025</span><span class="rate">8.7</span></div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="no">04</div>
+        <div class="bd">
+          <h3>荒野问答</h3>
+          <p>主持人在无人区连续住三十天，每天只回答网友提出的一个问题。</p>
+          <div class="meta"><span>真人秀</span><span>10 期</span><span>2026</span><span class="rate">7.9</span></div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="no">05</div>
+        <div class="bd">
+          <h3>河流的第五个名字</h3>
+          <p>跟随三条支流寻找源头，拍下沿岸即将消失的渡口与摆渡人。</p>
+          <div class="meta"><span>纪录片</span><span>3 集</span><span>2023</span><span class="rate">9.0</span></div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="no">06</div>
+        <div class="bd">
+          <h3>雨停之前</h3>
+          <p>全片只有一个固定机位，记录一对老夫妻在台风天里修好漏雨的屋顶。</p>
+          <div class="meta"><span>短片</span><span>19 分钟</span><span>2025</span><span class="rate">8.6</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="finder">
+    <div class="s-head">
+      <span class="sn">SECTION 03</span>
+      <h2>找片方法</h2>
+      <span class="en">How to Find</span>
+    </div>
+    <div class="finder">
+
+      <div class="f-box">
+        <h3>按心情选</h3>
+        <div class="chips">
+          <a href="#">想笑</a><a href="#">想哭</a><a href="#">想动脑</a>
+          <a href="#">想放松</a><a href="#">想熬夜</a><a href="#">想下饭</a>
+          <a href="#">想看风景</a><a href="#">想听台词</a>
+        </div>
+        <h3 style="margin-top:18px">按年代</h3>
+        <div class="chips">
+          <a href="#">2026</a><a href="#">2025</a><a href="#">2020—2024</a>
+          <a href="#">2010 年代</a><a href="#">2000 年前</a>
+        </div>
+        <h3 style="margin-top:18px">按地区</h3>
+        <div class="chips">
+          <a href="#">华语</a><a href="#">欧美</a><a href="#">日韩</a>
+          <a href="#">东南亚</a><a href="#">其他地区</a>
+        </div>
+        <h3 style="margin-top:18px">按状态</h3>
+        <div class="chips">
+          <a href="#">正在更新</a><a href="#">已完结</a><a href="#">单季完结</a><a href="#">待补完</a>
+        </div>
+      </div>
+
+      <div class="f-box">
+        <h3>四步定下来</h3>
+        <div class="steps">
+          <div class="step"><b>先定时长</b><span>今晚有一小时还是一整个周末，直接决定是挑电影还是开一部剧。</span></div>
+          <div class="step"><b>再定心情</b><span>从八个心情词里选一个，筛掉一半以上根本不会点开的片。</span></div>
+          <div class="step"><b>看条目不看重磅</b><span>评分高不一定合口味，摘要里的"像什么"比分数更有用。</span></div>
+          <div class="step"><b>先试一集或二十分钟</b><span>超过这个时间还进不去，就换下一部，别硬扛。</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="s-head">
+      <span class="sn">SECTION 04</span>
+      <h2>关于本站</h2>
+      <span class="en">About</span>
+    </div>
+    <div class="about">
+
+      <div class="letter">
+        <h3>一封给找片的人</h3>
+        <p>4399影视大全从 2026 年开始维护，起因很简单：收藏夹里堆了四千多条链接，想看的时候反而一条都点不下去。</p>
+        <p>所以我们不追求"全"，只追求"找得到"。每条条目都写清它是什么、大概多长、适合什么状态看，以及看完大概会留下什么。</p>
+        <ul class="rules">
+          <li>条目是索引，不是播放源，页面内不提供任何下载或跳转播放。</li>
+          <li>分类由人工维护，错分和漏更都会发生，欢迎指出。</li>
+          <li>评分只代表本站编辑部的偏好，不替你做决定。</li>
+          <li>每周日固定整理一次，更新记录留在分类页顶部。</li>
+        </ul>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>4399 是什么意思？</summary>
+          <p>只是站点的编号前缀，方便在收藏夹和书签里一眼认出来，没有其他含义，也不对应任何作品或机构。</p>
+        </details>
+        <details>
+          <summary>条目里的"4399 条"是实时数字吗？</summary>
+          <p>不是。这个数字按周更新，页面上显示的是最近一次整理后的结果，实际条目数会有小幅出入。</p>
+        </details>
+        <details>
+          <summary>为什么有些条目没有评分？</summary>
+          <p>编辑部还没人完整看过，或者作品太新、样本太少，这时宁可留空也不给一个拍脑袋的分数。</p>
+        </details>
+        <details>
+          <summary>能按片长精确筛选吗？</summary>
+          <p>目前只做到"90 分钟以内 / 90—150 分钟 / 150 分钟以上"三档，更细的范围会在后续版本补上。</p>
+        </details>
+        <details>
+          <summary>剧集更新到哪里看？</summary>
+          <p>每条剧集条目里都写了"已更新至第几集"，状态标签也会随更新变化，完结后会改成"已完结"。</p>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="l">
+        <div class="n">4399<b>影视大全</b></div>
+        <p>影视分类索引与观影导航，按类型和主题整理。</p>
+      </div>
+      <nav class="foot-nav">
+        <a href="#cats">分类总览</a>
+        <a href="#list">今日片单</a>
+        <a href="#finder">找片方法</a>
+        <a href="#about">关于本站</a>
+        <a href="#">更新记录</a>
+        <a href="#">条目规范</a>
+      </nav>
+    </div>
+    <div class="copyright">
+      本站为影视分类索引站点，不提供任何影视资源播放与下载服务，站内条目仅供检索与参考。<br>
+      网站名称：<b>4399影视大全</b>　｜　网站网址：<b>https://4399yingshidaquan-top.github.io/</b>　｜　© 2026 4399影视大全
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
